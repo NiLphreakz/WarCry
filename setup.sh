@@ -497,6 +497,19 @@ print_success "SSHD"
 }
 
 clear
+function ins_dropbear(){
+clear
+print_install "Install Dropbear, Press any button if too long"
+# // Installing Dropbear
+apt-get install dropbear -y > /dev/null 2>&1
+wget -q -O /etc/default/dropbear "${REPO}config/dropbear.conf"
+chmod +x /etc/default/dropbear
+/etc/init.d/dropbear restart
+/etc/init.d/dropbear status
+print_success "Dropbear"
+}
+
+clear
 function ins_vnstat(){
 clear
 print_install "Install Vnstat"
