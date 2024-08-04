@@ -41,7 +41,7 @@ baris_panjang
     echo "16. Check Logs"
     echo "17. Uninstall Noobzvpn"
     echo "18. install Noobzvpn"
-    echo "19. Exit"
+    echo "19. Back To Main Menu"
 baris_panjang
 }
 
@@ -324,7 +324,7 @@ while true; do
 	16) check_logs ;;
 	17) uninstall_noobz ;;
 	18) install_noobz ;;
-        19) exit ;;
+        19) menu ;;
         *) echo "Invalid choice. Please enter a number between 1 and 13." ;;
     esac
 done
